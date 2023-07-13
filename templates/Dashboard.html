@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+  </style>
+  <style>
+    .w3-quarter {
+      width: 20%;
+    }
+  </style>
+  <style>
+    table {
+      display: none;
+    }
+
+    table.show {
+      display: table;
+      border-collapse: collapse;
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+  <style>
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .button-container .w3-button {
+        flex-basis: 20%;
+    }
+
+    .dropdown-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .w3-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .w3-select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .w3-label {
+        margin-bottom: 5px;
+        display: block;
+        font-weight: bold;
+    }
+</style>
+<script>
+    function handleButtonClick11() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric1").value;
+        var resources = document.getElementById("Resources1").value;
+
+        // Perform actions based on the selected values
+        if (evaluationMetric == "FIFO/LIFO/Random") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table11');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table12');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selected");
+        }
+    }
+
+    function handleButtonClick12() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric1").value;
+        var resources = document.getElementById("Resources1").value;
+
+        // Perform actions based on the selected values
+        if (evaluationMetric == "FIFO/LIFO/Random") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table13');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table14');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selected");
+        }
+    }
+
+    function handleButtonClick13() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric1").value;
+        var resources = document.getElementById("Resources1").value;
+
+        // Perform actions based on the selected values
+        if (evaluationMetric == "FIFO/LIFO/Random") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table15');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table16');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selected");
+        }
+    }
+
+    function handleButtonClick21() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric2").value;
+        var resources = document.getElementById("Resources2").value;
+    
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Activity-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table21');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table22');
+            }
+        } else if (evaluationMetric == "Time-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table221');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table222');
+            }
+        } else if (evaluationMetric == "Size-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table2221');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table2222');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selection made.");
+        }
+    }
+    
+    
+
+    function handleButtonClick22() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric2").value;
+        var resources = document.getElementById("Resources2").value;
+    
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Activity-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table23');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table24');
+            }
+        } else if (evaluationMetric == "Time-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table223');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table224');
+            }
+        } else if (evaluationMetric == "Size-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table2223');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table2224');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selection made.");
+        }
+    }
+    function handleButtonClick23() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric2").value;
+        var resources = document.getElementById("Resources2").value;
+    
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Activity-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table25');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table26');
+            }
+        } else if (evaluationMetric == "Time-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table225');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table226');
+            }
+        } else if (evaluationMetric == "Size-based Batch") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table2225');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table2226');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selection made.");
+        }
+    }
+
+    function handleButtonClick31() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric3").value;
+        var resources = document.getElementById("Resources3").value;
+    
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Workload per month") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table31');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table32');
+            }
+        } else if (evaluationMetric == "Workload per year") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table331');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table332');
+            }
+        } else if (evaluationMetric == "Workload per quarter") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table3331');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table3332');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selection made.");
+        }
+    }
+
+    function handleButtonClick32() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric3").value;
+        var resources = document.getElementById("Resources3").value;
+    
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Workload per month") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table33');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table34');
+            }
+        } else if (evaluationMetric == "Workload per year") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table333');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table334');
+            }
+        } else if (evaluationMetric == "Workload per quarter") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table3333');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table3334');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selection made.");
+        }
+    }
+
+    function handleButtonClick33() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric3").value;
+        var resources = document.getElementById("Resources3").value;
+    
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Workload per month") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table35');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table36');
+            }
+        } else if (evaluationMetric == "Workload per year") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table335');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table336');
+            }
+        } else if (evaluationMetric == "Workload per quarter") {
+            if (resources == "All Resources") {
+                // Call function to show table for all resources
+                showTable('table3335');
+            } else if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table3336');
+            }
+        } else {
+            // Handle other cases or show an alert
+            alert("No selection made.");
+        }
+    }
+
+    function handleButtonClick34() {
+        // Get the selected values from the drop-downs
+        var evaluationMetric = document.getElementById("evaluation-metric3").value;
+        var resources = document.getElementById("Resources3").value;
+
+        // Perform actions based on the selected values
+        if (evaluationMetric == "Workload per month") {
+            if (resources == "Top 20 Resources") {
+                // Call function to show table for all resources
+                showTable('table37');
+            }
+        }
+        else if (evaluationMetric == "Workload per year") {
+             if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table337');
+            }
+        } 
+        else if (evaluationMetric == "Workload per quarter") {
+           if (resources == "Top 20 Resources") {
+                // Call function to show table for top 20 resources
+                showTable('table3337');
+            }
+        }
+        else {
+            // Handle other cases or show an alert
+            alert("No selected");
+        }
+    }
+
+    
+</script>
+</head>
+
+<body class="w3-light-grey">
+
+
+  <!-- Top container -->
+  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <span class="w3-bar-item w3-right">P2P Process</span>
+  </div>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+      <div class="w3-col s8 w3-bar">
+        <span>Welcome, <strong>Faizan</strong></span><br>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+      <h5>Dashboard</h5>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button w3-padding w3-blue" id="button1"
+        onclick="showSubButtons('subbuttons1')">Work Prioritization Pattern</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding w3-blue" id="button2"
+        onclick="showSubButtons('subbuttons2')">Batching Pattern</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding w3-blue" id="button3"
+        onclick="showSubButtons('subbuttons3')">Workload Pattern</a>
+    </div>
+  </nav>
+
+  <!-- !PAGE CONTENT! -->
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+    </header>
+
+  
+
+    <div class="button-container">
+        <div class="w3-fifth w3-center" id="subbuttons1" style="display: none;">
+            <div style="display: inline-block;">
+                <a href="#" class="w3-button" onclick="handleButtonClick11()">Working Behaviour</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick12()">Working Behaviour Evaluated</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick13()">Success Rate</a>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <label class="w3-label" for="Resources">Resources:</label>
+                <select class="w3-select" id="Resources1">
+                    <option value="All Resources">All Resources</option>
+                    <option value="Top 20 Resources">Top 20 Resources</option>
+                </select>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <label class="w3-label" for="evaluation-metric">Select the evaluation metric:</label>
+                <select class="w3-select" id="evaluation-metric1">
+                    <option value=""></option>
+                    <option value="FIFO/LIFO/Random">FIFO/LIFO/Random</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <div class="w3-fifth w3-center" id="subbuttons2" style="display: none;">
+            <div style="display: inline-block;">
+                <a href="#" class="w3-button" onclick="handleButtonClick21()">Working Behaviour</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick22()">Working Behaviour Evaluated</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick23()">Success Rate</a>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <label class="w3-label" for="Resources">Resources:</label>
+                <select class="w3-select" id="Resources2">
+                    <option value="All Resources">All Resources</option>
+                    <option value="Top 20 Resources">Top 20 Resources</option>
+                </select>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <label class="w3-label" for="evaluation-metric">Select the evaluation metric:</label>
+                <select class="w3-select" id="evaluation-metric2">
+                    <option value=""></option>
+                    <option value="Activity-based Batch">Activity-based Batch</option>
+                    <option value="Time-based Batch">Time-based Batch</option>
+                    <option value="Size-based Batch">Size-based Batch</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <div class="w3-fifth w3-center" id="subbuttons3" style="display: none;">
+            <div style="display: inline-block;">
+                <a href="#" class="w3-button" onclick="handleButtonClick31()">Working Behaviour</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick32()">Working Behaviour Evaluated</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick33()">Success Rate</a>
+                <a href="#" class="w3-button" onclick="handleButtonClick34()">Optimal Workload</a>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <label class="w3-label" for="Resources">Resources:</label>
+                <select class="w3-select" id="Resources3">
+                    <option value="All Resources">All Resources</option>
+                    <option value="Top 20 Resources">Top 20 Resources</option>
+                </select>
+            </div>
+            <div style="display: inline-block; margin-left: 10px;">
+                <label class="w3-label" for="evaluation-metric">Select the evaluation metric:</label>
+                <select class="w3-select" id="evaluation-metric3">
+                    <option value=""></option>
+                    <option value="Workload per month">Workload per month</option>
+                    <option value="Workload per year">Workload per year</option>
+                    <option value="Workload per quarter">Workload per quarter</option>
+                </select>
+            </div>
+        </div>
+    </div>
+        
+    
+
+    <div style="overflow-x: scroll; overflow-y: scroll; width: 1200px; height: 600px;">
+        <table id="table11" class="show" style="display: none;">
+            <!-- Table 1 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table11_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table11_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table12" class="show" style="display: none;">
+            <!-- Table 1 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table12_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table12_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table13" style="display: none;">
+            <!-- Table 2 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table13_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table13_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table14" style="display: none;">
+            <!-- Table 2 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table14_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table14_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table15" style="display: none;">
+            <!-- Table 2 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table15_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table15_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table16" style="display: none;">
+            <!-- Table 2 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table16_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table16_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table21" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table21_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table21_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table22" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table22_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table22_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table23" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table23_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table23_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table24" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table24_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table24_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table25" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table25_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table25_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table26" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table26_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table26_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table221" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table221_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table221_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table222" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table222_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table222_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table223" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table223_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table223_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table224" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table224_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table224_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table225" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table225_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table225_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table226" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table226_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table226_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table2221" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table2221_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table2221_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table2222" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table2222_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table2222_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table2223" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table2223_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table2223_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table2224" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table2224_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table2224_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table2225" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table2225_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table2225_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table2226" style="display: none; ">
+            <!-- Table 4 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table2226_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table2226_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table31" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table31_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table31_data.values %}
+                    <tr>
+                        {% for value in row %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        
+        
+    
+    
+        <table id="table32" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table32_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table32_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table33" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table33_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table33_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    
+        <table id="table34" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table34_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table34_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table35" style="display: none;">
+            <!-- Table 5 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table35_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table35_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <table id="table36" style="display: none;">
+            <!-- Table 5 HTML code -->
+            <thead>
+                <tr>
+                    {% for column in table36_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table36_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table id="table37" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table37_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table37_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+        <table id="table331" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table331_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table331_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table332" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table332_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table332_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table333" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table333_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table333_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table334" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table334_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table334_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table335" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table335_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table335_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table336" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table336_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table336_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table337" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table337_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table337_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3331" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3331_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3331_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3332" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3332_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3332_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3333" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3333_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3333_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3334" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3334_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3334_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3335" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3335_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3335_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3336" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3336_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3336_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table id="table3337" style="display: none;">
+            <thead>
+                <tr>
+                    {% for column in table3337_data.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for row in table3337_data.values %}
+                <tr>
+                    {% for value in row %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    </div>
+
+    <!-- End page content -->
+  </div>
+
+  <script>
+
+
+    function showSubButtons(id) {
+      var sub1 = document.getElementById('subbuttons1');
+      var sub2 = document.getElementById('subbuttons2');
+      var sub3 = document.getElementById('subbuttons3');
+      sub1.style.display = "none"
+
+      var subbuttons = document.getElementById(id);
+      if (id == 'subbuttons1') {
+        sub1.style.display = "block";
+        sub2.style.display = "none";
+        sub3.style.display = "none";
+        document.getElementById('table21').style.display = 'none';
+        document.getElementById('table22').style.display = 'none';
+        document.getElementById('table23').style.display = 'none';
+        document.getElementById('table24').style.display = 'none';
+        document.getElementById('table25').style.display = 'none';
+        document.getElementById('table26').style.display = 'none';
+        document.getElementById('table221').style.display = 'none';
+        document.getElementById('table222').style.display = 'none';
+        document.getElementById('table223').style.display = 'none';
+        document.getElementById('table224').style.display = 'none';
+        document.getElementById('table225').style.display = 'none';
+        document.getElementById('table226').style.display = 'none';
+        document.getElementById('table2221').style.display = 'none';
+        document.getElementById('table2222').style.display = 'none';
+        document.getElementById('table2223').style.display = 'none';
+        document.getElementById('table2224').style.display = 'none';
+        document.getElementById('table2225').style.display = 'none';
+        document.getElementById('table2226').style.display = 'none';
+        document.getElementById('table31').style.display = 'none';
+        document.getElementById('table32').style.display = 'none';
+        document.getElementById('table33').style.display = 'none';
+        document.getElementById('table34').style.display = 'none';
+        document.getElementById('table35').style.display = 'none';
+        document.getElementById('table36').style.display = 'none';
+        document.getElementById('table37').style.display = 'none';
+        document.getElementById('table331').style.display = 'none';
+        document.getElementById('table332').style.display = 'none';
+        document.getElementById('table333').style.display = 'none';
+        document.getElementById('table334').style.display = 'none';
+        document.getElementById('table335').style.display = 'none';
+        document.getElementById('table336').style.display = 'none';
+        document.getElementById('table337').style.display = 'none';
+        document.getElementById('table3331').style.display = 'none';
+        document.getElementById('table3332').style.display = 'none';
+        document.getElementById('table3333').style.display = 'none';
+        document.getElementById('table3334').style.display = 'none';
+        document.getElementById('table3335').style.display = 'none';
+        document.getElementById('table3336').style.display = 'none';
+        document.getElementById('table3337').style.display = 'none';
+
+      }
+      if (id == 'subbuttons2') {
+        sub1.style.display = "none";
+        sub2.style.display = "block";
+        sub3.style.display = "none";
+        document.getElementById('table11').style.display = 'none';
+        document.getElementById('table12').style.display = 'none';
+        document.getElementById('table13').style.display = 'none';
+        document.getElementById('table14').style.display = 'none';
+        document.getElementById('table15').style.display = 'none';
+        document.getElementById('table16').style.display = 'none';
+        document.getElementById('table31').style.display = 'none';
+        document.getElementById('table32').style.display = 'none';
+        document.getElementById('table33').style.display = 'none';
+        document.getElementById('table34').style.display = 'none';
+        document.getElementById('table35').style.display = 'none';
+        document.getElementById('table36').style.display = 'none';
+        document.getElementById('table37').style.display = 'none';
+        document.getElementById('table331').style.display = 'none';
+        document.getElementById('table332').style.display = 'none';
+        document.getElementById('table333').style.display = 'none';
+        document.getElementById('table334').style.display = 'none';
+        document.getElementById('table335').style.display = 'none';
+        document.getElementById('table336').style.display = 'none';
+        document.getElementById('table337').style.display = 'none';
+        document.getElementById('table3331').style.display = 'none';
+        document.getElementById('table3332').style.display = 'none';
+        document.getElementById('table3333').style.display = 'none';
+        document.getElementById('table3334').style.display = 'none';
+        document.getElementById('table3335').style.display = 'none';
+        document.getElementById('table3336').style.display = 'none';
+        document.getElementById('table3337').style.display = 'none';
+        
+
+      }
+      if (id == 'subbuttons3') {
+        sub1.style.display = "none";
+        sub2.style.display = "none";
+        sub3.style.display = "block";
+        document.getElementById('table11').style.display = 'none';
+        document.getElementById('table12').style.display = 'none';
+        document.getElementById('table13').style.display = 'none';
+        document.getElementById('table14').style.display = 'none';
+        document.getElementById('table15').style.display = 'none';
+        document.getElementById('table16').style.display = 'none';
+        document.getElementById('table21').style.display = 'none';
+        document.getElementById('table22').style.display = 'none';
+        document.getElementById('table23').style.display = 'none';
+        document.getElementById('table24').style.display = 'none';
+        document.getElementById('table25').style.display = 'none';
+        document.getElementById('table26').style.display = 'none';
+        document.getElementById('table221').style.display = 'none';
+        document.getElementById('table222').style.display = 'none';
+        document.getElementById('table223').style.display = 'none';
+        document.getElementById('table224').style.display = 'none';
+        document.getElementById('table225').style.display = 'none';
+        document.getElementById('table226').style.display = 'none';
+        document.getElementById('table2221').style.display = 'none';
+        document.getElementById('table2222').style.display = 'none';
+        document.getElementById('table2223').style.display = 'none';
+        document.getElementById('table2224').style.display = 'none';
+        document.getElementById('table2225').style.display = 'none';
+        document.getElementById('table2226').style.display = 'none';
+        
+
+      }
+
+    }
+
+    function showTable(tableId) {
+        var tables = ['table11', 'table12', 'table13', 'table14', 'table15', 'table16', 'table21', 'table22', 'table23', 'table24', 'table25', 'table26', 'table221', 'table222', 'table223', 'table224', 'table225', 'table226', 'table2221', 'table2222', 'table2223', 'table2224', 'table2225', 'table2226', 'table31', 'table32', 'table33', 'table34', 'table35', 'table36', 'table37', 'table331', 'table332', 'table333', 'table334', 'table335', 'table336', 'table337', 'table3331', 'table3332', 'table3333', 'table3334', 'table3335', 'table3336', 'table3337'];
+        
+        for (var i = 0; i < tables.length; i++) {
+            var table = tables[i];
+            
+            if (table === tableId) {
+                document.getElementById(table).style.display = 'block';
+                document.getElementById(table).classList.add('show');
+            } else {
+                document.getElementById(table).style.display = 'none';
+                document.getElementById(table).classList.remove('show');
+            }
+        }
+    }
+    
+    
+
+  </script>
+</body>
+
+</html>
