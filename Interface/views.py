@@ -1304,21 +1304,42 @@ def All_Functions(dataframe,kpi,log,start_activity):
     #return dataframe,resources,dataframe_good,dataframe_bad,workload_AR,workload_top20,workload_evaluated_AR,workload_evaluated_top20,workload_sr_AR,workload_sr_top20,optimal_workload
     return working_behaviour,working_behaviour_top20,working_behaviour_evaluated,working_behaviour_evaluated_top20,weighted_success_rate,weighted_success_rate_top20,Batching_AR_AB,Batching_top20_AB,Batching_Evaluated_AR_AB,Batching_Evaluated_top20_AB,Batching_SR_AR_AB,Batching_SR_top20_AB,Batching_AR_TB,Batching_top20_TB,Batching_Evaluated_AR_TB,Batching_Evaluated_top20_TB,Batching_SR_AR_TB,Batching_SR_top20_TB,Batching_AR_SB,Batching_top20_SB,Batching_Evaluated_AR_SB,Batching_Evaluated_top20_SB,Batching_SR_AR_SB,Batching_SR_top20_SB,workload_AR,workload_top20,workload_evaluated_AR,workload_evaluated_top20,workload_sr_AR,workload_sr_top20,optimal_workload,workload_AR_Y,workload_top20_Y,workload_evaluated_AR_Y,workload_evaluated_top20_Y,workload_sr_AR_Y,workload_sr_top20_Y,optimal_workload_Y,workload_AR_Q,workload_top20_Q,workload_evaluated_AR_Q,workload_evaluated_top20_Q,workload_sr_AR_Q,workload_sr_top20_Q,optimal_workload_Q
 
+
 def home(request):
     import pm4py
+    import tempfile
+    import os
+    import gzip
+
     if request.method == 'POST':
         form = MyForm(request.POST, request.FILES)
         if form.is_valid():
             xes_file = request.FILES['xes_file']
-            log = pm4py.read_xes('Logs/Public_Log.xes.gz')
-            df = pm4py.convert_to_dataframe(log)
+            if xes_file.size > 0:
+                # Save the uploaded file to a temporary location
+                with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+                    temp_file.write(xes_file.read())
+                    temp_file_path = temp_file.name
+                    print("Temporary file path:", temp_file_path)
+                
+                    # Read the XES file using pm4py
+                    log = pm4py.read_xes(temp_file_path)
+                    df = pm4py.convert_to_dataframe(log)
+                    
+            
+            # Remove the temporary file
+            
+           
+            #df = pm4py.convert_to_dataframe(log)
             dropdown_choice = form.cleaned_data['dropdown']
             start_activities = pm4py.get_start_activities(log)
             for key, value in start_activities.items():
                 start_activity = str(key)
                 value_str = str(value)
             table11_data,table12_data,table13_data,table14_data,table15_data,table16_data,table21_data,table22_data,table23_data,table24_data,table25_data,table26_data,table221_data,table222_data,table223_data,table224_data,table225_data,table226_data,table2221_data,table2222_data,table2223_data,table2224_data,table2225_data,table2226_data, table31_data, table32_data, table33_data, table34_data, table35_data, table36_data, table37_data, table331_data,table332_data,table333_data,table334_data,table335_data,table336_data,table337_data, table3331_data,table3332_data,table3333_data,table3334_data,table3335_data,table3336_data, table3337_data = All_Functions(df,dropdown_choice,log,start_activity)
-
+            
+            os.remove(temp_file_path)
+            
             # Render the output in a template
             return render(request, 'Dashboard.html', {'table11_data': table11_data, 'table12_data': table12_data, 'table13_data': table13_data, 'table14_data': table14_data, 'table15_data': table15_data, 'table16_data': table16_data,'table21_data': table21_data,'table22_data': table22_data,'table23_data': table23_data, 'table24_data': table24_data, 'table25_data': table25_data, 'table26_data': table26_data, 'table221_data': table221_data, 'table222_data': table222_data, 'table223_data': table223_data, 'table224_data': table224_data, 'table225_data': table225_data, 'table226_data': table226_data, 'table2221_data': table2221_data, 'table2222_data': table2222_data,'table2223_data': table2223_data,'table2224_data': table2224_data,'table2225_data': table2225_data,'table2226_data': table2226_data, 'table31_data': table31_data, 'table32_data': table32_data, 'table33_data': table33_data, 'table34_data': table34_data, 'table35_data': table35_data, 'table36_data': table36_data, 'table37_data': table37_data, 'table331_data': table331_data, 'table332_data': table332_data,'table333_data': table333_data,'table334_data': table334_data,'table335_data': table335_data,'table336_data': table336_data ,'table337_data': table337_data, 'table3331_data': table3331_data, 'table3332_data': table3332_data,'table3333_data': table3333_data,'table3334_data': table3334_data,'table3335_data': table3335_data,'table3336_data': table3336_data ,'table3337_data': table3337_data })
             #return render(request,'Testing_Results_V2.html')
